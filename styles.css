@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.body1
+{
+    background-image: url("https://i.pinimg.com/736x/ac/1c/f3/ac1cf3b93e20336c7d6bd1794ec1d6b8.jpg");
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-attachment:fixed;
+    background-size:cover;   
+}
+
+.div1
+{
+    background-color: #DE4F4F;
+    height: 130px;
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.div2
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+
+}
+
+.img1
+{
+    width:303px;
+    height:310px;
+    position:absolute;
+    transform : translate(-50%,-50%);
+    left: 50%;
+    top:150px;
+}
+
+.bar
+{
+    width: 500px;
+    height: 40px;
+    opacity: 0.4;
+    padding-left:40px;
+}
+
+.loupe
+{
+    width: 28px;
+    height: 50px;
+    position:absolute;
+    left:10px;
+    top:-5px;
+}
+
+.div3
+{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    margin-top:200px;
+}
+
+.img4
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.img4 li
+{
+    margin-left:35px;
+}
+
+.img4 li img
+{
+    max-height:140px;
+}
+
+.div4
+{
+    width: 500px;
+    position:relative;
+}
+
+.p1
+{
+    font-family:"Exo 2",Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    font-size:40px;
+    text-align:center;
+    margin-bottom: 14px;
+}
+
+.divdra
+{
+    margin-top:200px;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    font-size:30px;
+}
+
+h2
+{
+    margin-right:20px;
+    font-family:"Exo 2",Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.number
+{
+    opacity: 0.4;
+font-family:"Roboto Slab",Verdana;
+}
+
+.div5
+{
+    background-color: rgba(223, 116, 40,0.6);
+    height:500px;
+    width:350px;
+    margin-left:30px;
+    transform: translateX(-50px);
+}
+
+.div6
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+
+.dracaufeu
+{
+    margin-right:330px;
+}
+
+.div7,.div8,.div9
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    font-size:28px;
+    margin-top:18px;
+}
+
+.div7 span  , .div8 span 
+{
+    display:block;
+    margin-top:35px;
+    font-family:"Proza Libre",Verdana;
+}
+
+h3
+{
+    font-family:"Exo 2",Verdana;
+}
+
+.div8
+{
+    margin-top: 50px;
+}
+
+.div10
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+
+.s
+{
+    text-align: center;
+}
+
+.div11
+{
+    background-color: #DF8A02;
+}
+
+.p2
+{
+font-size:25px;
+text-align:center;
+}
+
+.div12
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    margin-top:30px;
+}
+
+#modal
+{
+    width:500px;
+    position:absolute;
+    background-color:rgba(255, 255, 255, 0.2);
+    min-height: 70px;
+    display:none;
+}
+
+#modal.active
+{
+    display:block;
+}
+
+.draca
+{
+    height: 70px;
+    margin-left:20px;
+}
+
+.dracau
+{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:center;
+    text-decoration: none;
+}
+
+h2
+{
+    font-size:30px;
+}
+
+#femalee
+{
+    margin-left:20px;
+}
+
+#asexue
+{
+    display:none;
+}
+
+#asexue.active
+{
+    display:block;
+}
