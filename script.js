@@ -115,7 +115,7 @@ async function afficherPokemon(pokemon) {
             female.innerText=infopoke.sexe.female;
         }
        
-        cri.src = await recupereCri(infopoke.name.en.toLowerCase());
+        cri.src = await recupereCri(infopoke.name.en.toLowerCase().replace(" ","-"));
     }
        
     async function recupereCri(pokemon) {
