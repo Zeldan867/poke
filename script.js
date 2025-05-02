@@ -17,6 +17,32 @@ if(searchBar){
             modalElement.classList.remove("active");
         }
     });
+    var nb1 = Math.floor(Math.random() * 1025);
+    var nb2 = Math.floor(Math.random() * 1025);
+    var nb3 = Math.floor(Math.random() * 1025);
+    var nb4 = Math.floor(Math.random() * 1025);
+    let pokedujour=[nb1,nb2,nb3,nb4];
+    for(let i =0;i<pokedujour.length;i++){
+        afficherPokemonDuJour(pokedujour[i]);
+    }
+}
+
+async function afficherPokemonDuJour(id) {
+    const removeAccents = (str) =>
+        str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");      
+    const url = "http://tyradex.vercel.app/api/v1/pokemon/"+id;
+    console.log(url)
+    const reponse = await fetch(url);
+    const listid = await reponse.json();
+    let li =document.createElement("li");
+    let nouveauElement=document.createElement("a");
+    nouveauElement.href = "pagedracaufeu.html?pokemon="+removeAccents(listid.name.fr.toLowerCase().replace(/\u2640\uFE0F?/g, "f").replace(/\u2642\uFE0F?/g, "m"));
+    let imgg=document.createElement("img");
+    imgg.src =listid.sprites.regular;
+    li.appendChild(nouveauElement);
+    nouveauElement.appendChild(imgg);
+    let list =document.getElementById("imgg4");
+    list.appendChild(li);
 }
 
 async function afficherPokemon(pokemon) {
@@ -29,7 +55,7 @@ async function afficherPokemon(pokemon) {
         for(let i=0; i<filter.length;i++) {        
             let nouveauElement = document.createElement("a");
             nouveauElement.className = "dracau";
-            nouveauElement.href = "pagedracaufeu.html?pokemon="+filter[i].name.fr.toLowerCase();
+            nouveauElement.href = "pagedracaufeu.html?pokemon="+filter[i].name.fr.toLowerCase().replace(/\u2640\uFE0F?/g, "f").replace(/\u2642\uFE0F?/g, "m");
 
             let image = document.createElement("img");
             image.className = "draca";
@@ -47,6 +73,11 @@ async function afficherPokemon(pokemon) {
             }       
         }      
     }
+
+    var pokepage=document.getElementById("pokepage");
+
+    if (pokepage){
+afficherPokemonPage("missingno.")
 
     async function afficherPokemonPage(pokemon) {
         let nom = document.getElementById("nom");
@@ -68,7 +99,7 @@ async function afficherPokemon(pokemon) {
         taille.innerText=infopoke.height;
         categorie.innerText=infopoke.category;
         poids.innerText=infopoke.weight;
-        talent.innerText = (infopoke.talents[1]?.name) ?? (infopoke.talents[0]?.name);
+        talent.innerText = infopoke.talents?.[1]?.name || infopoke.talents?.[0]?.name || "pas de talent";
         img.src=infopoke.sprites.regular;
         if (infopoke.sexe == null) {
         let sexeContainer = document.getElementsByClassName("div10")[0];
@@ -97,5 +128,7 @@ async function afficherPokemon(pokemon) {
 
     let valeur = params.get("pokemon");
 
-    console.log(afficherPokemonPage(valeur))
-    afficherPokemonPage(valeur)
+    //console.log(afficherPokemonPage(valeur))
+    //afficherPokemonPage(valeur)
+
+    }
