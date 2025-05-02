@@ -77,7 +77,6 @@ async function afficherPokemon(pokemon) {
     var pokepage=document.getElementById("pokepage");
 
     if (pokepage){
-afficherPokemonPage("missingno.")
 
     async function afficherPokemonPage(pokemon) {
         let nom = document.getElementById("nom");
@@ -128,7 +127,7 @@ afficherPokemonPage("missingno.")
 
     let valeur = params.get("pokemon");
 
-    //console.log(afficherPokemonPage(valeur))
-    //afficherPokemonPage(valeur)
+    console.log(afficherPokemonPage(valeur))
+    afficherPokemonPage(valeur)
 
     }
