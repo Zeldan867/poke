@@ -55,7 +55,7 @@ async function afficherPokemon(pokemon) {
         for(let i=0; i<filter.length;i++) {        
             let nouveauElement = document.createElement("a");
             nouveauElement.className = "dracau";
-            nouveauElement.href = "pagedracaufeu.html?pokemon="+filter[i].name.fr.toLowerCase().replace(/\u2640\uFE0F?/g, "f").replace(/\u2642\uFE0F?/g, "m");
+            nouveauElement.href = "pagedracaufeu.html?pokemon="+removeAccents(filter[i].name.fr.toLowerCase().replace(/\u2640\uFE0F?/g, "f").replace(/\u2642\uFE0F?/g, "m"));
 
             let image = document.createElement("img");
             image.className = "draca";
