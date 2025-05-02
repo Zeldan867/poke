@@ -46,6 +46,8 @@ async function afficherPokemonDuJour(id) {
 }
 
 async function afficherPokemon(pokemon) {
+    const removeAccents = (str) =>
+        str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     const reponse = await fetch("http://tyradex.vercel.app/api/v1/pokemon");
     const listpoke = await reponse.json();
     const filter = listpoke.filter(p => p.name.fr.toLowerCase().includes(pokemon.toLowerCase()));
